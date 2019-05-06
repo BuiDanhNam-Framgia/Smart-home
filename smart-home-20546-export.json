@@ -1,0 +1,23 @@
+{
+  "device" : [ null, {
+    "id" : 1,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/smart-home-20546.appspot.com/o/icon_device%2Fhome_lamp.png?alt=media&token=97a403b2-ceda-4811-809c-1586424ddc14",
+    "key" : "light_living_room",
+    "status" : 0
+  }, {
+    "id" : 2,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/smart-home-20546.appspot.com/o/icon_device%2Fdesk_lamp.png?alt=media&token=020a1df2-9ddd-4c15-9dbe-ca6b6fe8a2d7",
+    "key" : "desk_lamp",
+    "status" : 1
+  }, {
+    "id" : 3,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/smart-home-20546.appspot.com/o/icon_device%2Flight.png?alt=media&token=468bb19b-1bb4-4eb7-a781-3e7a13cc3811",
+    "key" : "light_bathroom",
+    "status" : 1
+  }, {
+    "id" : 4,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/smart-home-20546.appspot.com/o/icon_device%2Ffans.png?alt=media&token=7aee6427-2eb8-4db2-9643-65fcbec7c4ce",
+    "key" : "fans",
+    "status" : 1
+  } ]
+}

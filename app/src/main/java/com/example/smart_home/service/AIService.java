@@ -15,7 +15,7 @@ import static com.example.smart_home.untils.Constance.KEY_AI;
 public class AIService {
     private final AIRequest aiRequest;
     private final AIDataService aiDataService;
-    private static  AIService instance;
+    private static AIService instance;
 
     private AIService() {
         AIConfiguration configuration = new AIConfiguration(KEY_AI, AIConfiguration.SupportedLanguages.English, AIConfiguration.RecognitionEngine.System);
@@ -32,11 +32,7 @@ public class AIService {
 
     public Single<AIResponse> query(final String query) {
         aiRequest.setQuery(query);
-        return Single.create(new SingleOnSubscribe<AIResponse>() {
-            @Override
-            public void subscribe(SingleEmitter<AIResponse> emitter) throws Exception {
-                emitter.onSuccess(aiDataService.request(aiRequest));
-            }
-        }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        return Single.create((SingleOnSubscribe<AIResponse>) emitter ->
+                emitter.onSuccess(aiDataService.request(aiRequest))).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }
 }
